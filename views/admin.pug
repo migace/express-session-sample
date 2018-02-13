@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div.columns
+    div.column
+      div.content
+        h1= title
+        p Welcome to Admin Panel section
+
+        button#logout.button.is-warning Logout
+
+  div.columns
+    div.column
+      table#data.table.is-striped.is-fullwidth
+        thead
+          tr
+            th Login
+            th Password
+            th Action
+        tbody              
+
+block scripts
+  script(src="/js/admin.js")
+  script(src="/js/logout.js")

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  div.columns.header
+    div.column.is-half
+      div.content
+        h1= title
+          a.button.is-link.is-pulled-right(href="/admin") Admin panel
+        p Welcome to #{title}    
+
+  div.columns
+    div.column.is-half
+      div.content
+        h3 Adding new user form 
+        form
+          div.field
+            label.label Username
+            div.control
+              input#login.input(placeholder="monkey")
+          
+          div.field
+            label.label Password
+            div.control
+              input#password.input(type="password")         
+
+          button#add-user.button.is-primary Add user
+
+    div.column.is-half
+      div.content
+        h3 Login form (access to admin panel)
+        form
+          div.field
+            label.label Login
+            div.control
+              input#login-login.input(placeholder="username")
+        
+          div.field
+            label.label Password
+            div.control
+              input#password-login.input(type="password")           
+
+          button#login-user.button.is-success Login
+
+block scripts
+  script(src="/js/user.js")
